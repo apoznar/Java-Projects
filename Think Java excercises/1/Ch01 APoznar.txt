@@ -1,0 +1,54 @@
+﻿Ćwiczenie 1-1
+1. Wyrażenie jest kompilowalne i wykonywalne, a komentarz nie
+2. Program jest przenośny, jeżeli może zostać uruchomiony na różnych sprzętach
+3. Kompilować to w języku angielskim zbierać fragmenty danych i łączyć je w całość
+4. Plik wykonywalny to obiekt który można uruchomić na specyficznym sprzęcie. Jest to rzeczownik, ponieważ jest to obiekt.
+
+Ćwiczenie 1-2
+
+public class Hello {
+    
+    public static void main(String[] args) {
+        //this method generates Hello World output
+        System.out.println("Hello world!");
+        System.out.println("How are you?\n\tDo you need some \"magic\" coffee?");
+        //newline,tab & double quote test
+        
+    }
+}
+
+Ćwiczenie 1-3
+1) Usunięcie {
+Error: Syntax error on token "Hello", { expected after this token
+
+2) Usunięcie } 
+Error: Syntax error, insert "}" to complete ClassBody
+
+3) main na mian (kompilacja ok) 
+Static Error: This class does not have a static void main method accepting String[].
+
+4) Usunięcie static (kompilacja ok)
+java.lang.NullPointerException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at edu.rice.cs.drjava.model.compiler.JavacCompiler.runCommand(JavacCompiler.java:267)
+
+5) Usunięcie public (kompilacja ok)
+Static Error: This class does not have a static void main method accepting String[].
+
+6) Usunięcie System
+Error: out cannot be resolved
+
+7) Zamiana println na Println
+Error: The method Println(java.lang.String) is undefined for the type java.io.PrintStream
+
+8) Zamiana println na print (kompilacja ok)
+po prostu brak przeskoczenia do kolejnej linijki w wyświetlaniu
+
+9) Usunięcie nawiasu
+Error: Syntax error on token "println", AssignmentOperator expected after this token
+
+10) dodanie nawiasu
+Nic się nie zmieniło

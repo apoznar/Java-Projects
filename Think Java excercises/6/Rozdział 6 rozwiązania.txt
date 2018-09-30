@@ -1,0 +1,9 @@
+6-1
+1) Kiedy odwo³asz siê do metody wartoœci bez return:
+Error: This method must return a result type ...
+2) kiedy dodasz metodê void jako czêœæ ekspresji
+Invalid assignment operator
+
+6-5
+ping!
+pong!
