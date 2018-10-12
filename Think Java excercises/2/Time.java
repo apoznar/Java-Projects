@@ -40,7 +40,7 @@ public class Time {
         double second3 = 20.0;
         double SECONDS_IN_A_DAY = 86400.0;
         double passedSeconds = hour3 * 3600 + minute3 * 60 + second3;
-        double fraction = passedSeconds / secondsInADay;
+        double fraction = passedSeconds / SECONDS_IN_A_DAY;
         System.out.print("Fraction of the day that has passed: ");
         System.out.println(fraction + " %");
         /* First variables needs to be changed here by user,
