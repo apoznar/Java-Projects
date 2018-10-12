@@ -1,9 +1,0 @@
-3-1
-Gdy próbujemy wyœwietliæ int poprzez %d:
-B³¹d java.util.IllegalFormatConversionException, java.lang.Int
-
-Gdy próbujemy wyœwietliæ double przez %f:
-to samo, ale java.lang.double
-
-Gdy u¿ywamy 2 specyfikatorów formatów, ale 1 wartoœæ:
-to samo, ale format.specifier
