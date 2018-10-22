@@ -1,5 +1,16 @@
+/**
+ * The Hello class implements an application that 
+ * displays "Hello World!" to the standard output
+ * and uses some escape sequences.
+ *
+ * @author  Adam Poznar
+ * @version 1.1
+ * @since   2018-09-11 
+ */
 public class CanSpell {
-    
+     /** 
+ * This main method 
+ */
     public static int[] letterHist(String str){
         char[] characters = str.toUpperCase().toCharArray();
         int[] result = new int[27];
@@ -13,7 +24,9 @@ public class CanSpell {
         }
         return result;
     }
-    
+     /** 
+ * This main method 
+ */
     public static boolean canSpell(String word, String libchar){
         int[] wordRequirment = letterHist(word);
         int[] libCapacity = letterHist(libchar);
