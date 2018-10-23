@@ -1,7 +1,17 @@
 import java.awt.Rectangle;
-
+/**
+ * The Hello class implements an application that 
+ * displays "Hello World!" to the standard output
+ * and uses some escape sequences.
+ *
+ * @author  Adam Poznar
+ * @version 1.1
+ * @since   2018-09-15 
+ */
 public class RectPoint {
-    
+     /** 
+ * This main method 
+ */
     Rectangle box1 = new Rectangle(2,4,7,9);
     Point p1 = findCenter(box1);
     printPoint(p1);
@@ -14,22 +24,18 @@ public class RectPoint {
      printPoint(p1);
      printPoint(p2);
      */
-    
+     /** 
+ * This main method 
+ */
     public static void printPoint(Point p){
         System.out.println("("+p.x+", "+p.y+")");
     }
-    
+     /** 
+ * This main method 
+ */
     public static Point findCenter(Rectangle box){
         int x = box.x + box.width / 2;
         int y = box.y + box.height / 2;
         return new Point(x,y);
     }
     
-    /*
-     1.   box1[] -> Rectangle[x[2] y[4] w[7] h[9]]
-     p1[] -> findCenter[box[]->box1 x[5] y[8]] -> Point[x[5] y[8]]
-     box1[] -> Rectangle[x[0] y[2] w[9] h[11]]
-     p2[] -> findCenter[box[]->box1 x[5] y[8]] -> Point[x[5] y[8]]
-     2. output (5, 8)\n(5, 8)\n
-     3. Not. `new` creates a new object
-     */
