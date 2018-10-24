@@ -5,7 +5,15 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-
+/**
+ * The Hello class implements an application that 
+ * displays "Hello World!" to the standard output
+ * and uses some escape sequences.
+ *
+ * @author  Adam Poznar
+ * @version 1.1
+ * @since   2018-09-15 
+ */
 public class CardTable extends Canvas {
 
     private Image[][] images;
