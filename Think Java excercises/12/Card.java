@@ -1,9 +1,23 @@
+/**
+ * The Hello class implements an application that 
+ * displays "Hello World!" to the standard output
+ * and uses some escape sequences.
+ *
+ * @author  Adam Poznar
+ * @version 1.1
+ * @since   2018-09-15 
+ */
 public class Card{
+    /** 
+ * This main method 
+ */
    public static void main(String args[]){
       //
       
    }
-
+ /** 
+ * This main method 
+ */
    public static Card[] makeDeck(){
       Card[] cards = new Card[52];
       for (int suit = 0;suit<=3;suit++){
@@ -13,7 +27,9 @@ public class Card{
       }
       return cards;
    }
-
+ /** 
+ * This main method 
+ */
    public int compareTo(Card that){
       if (this.suit < that.suit){
          return -1;
@@ -39,7 +55,9 @@ public class Card{
       }
       return 0;
    }
-
+ /** 
+ * This main method 
+ */
    public static int[] suitHist(Card[] cards){
       int[] result = new int[4];
       for (Card card:cards){
@@ -47,6 +65,9 @@ public class Card{
       }
       return result;
    }
+    /** 
+ * This main method 
+ */
    public static boolean hasFlush(Card[] cards){
       for (int count:suitHist(cards)){
          if (count >= 5){
