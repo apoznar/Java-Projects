@@ -5,32 +5,31 @@ import java.util.Scanner;
  * changes it to Fahrenheit value and prints it within an equasion.
  *
  * @author  Adam Poznar
- * @version 1.1
- * @since   2018-09-12 
+ * @version 1.2
+ * @since   2018-09-13 
  */
 public class TempConverter {
     /** 
-    * This main method take user input in doubles,
-    * changes it to another and prints both of them.
-    */
-   public static void main(String args[]){
-      /**
-      * Declaration of Scanner variable 'console', creating
-      * new Scanner object with input stream as parameter in it.
-      * After printed question, user input as double will be
-      * stored in 'temperature' variable.
-      */
-      Scanner console = new Scanner(System.in);
-      System.out.print("Input temperature in Celsius: ");
-      double temperature = console.nextDouble();
-      /**
-      * Computes Fahrenheit value from input by using equation,
-      * prints them both in a form of another eqation and closes input.
-      */
-      double temperatureInF = temperature * 9 / 5 + 32;
-      System.out.printf("%.1f C = %.1f F\n", temperature, temperatureInF);
-      console.close();
-   }
+     * Takes user input in doubles, changes it to another and prints both of them.
+     */
+    public static void main(String args[]){
+        /**
+         * Declaration of Scanner variable 'console', creating
+         * new Scanner object with input stream as parameter in it.
+         * After printed question, user input as double will be
+         * stored in 'temperature' variable.
+         */
+        Scanner console = new Scanner(System.in);
+        System.out.print("Input temperature in Celsius: ");
+        double temperature = console.nextDouble();
+        /**
+         * Computes Fahrenheit value from input by using equation,
+         * prints them both in a form of another eqation and closes input.
+         */
+        double temperatureInF = temperature * 9 / 5 + 32;
+        System.out.printf("%.1f C = %.1f F\n", temperature, temperatureInF);
+        console.close();
+    }
 }
 /**
  * Ideas of improving this class:
