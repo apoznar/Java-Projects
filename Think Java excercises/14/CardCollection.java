@@ -1,6 +1,14 @@
 import java.util.ArrayList;
 import java.util.Random;
-
+/**
+ * The Hello class implements an application that 
+ * displays "Hello World!" to the standard output
+ * and uses some escape sequences.
+ *
+ * @author  Adam Poznar
+ * @version 1.1
+ * @since   2018-09-15 
+ */
 /**
  * A collection of playing cards.
  */
