@@ -14,7 +14,8 @@ public class RecursiveProd {
         System.out.println(prod(1, 4));
     }
     /** 
-     * Takes arguments from main method, computes equation and returns value.
+     * Takes arguments from main method, computes equation and returns value
+     * by using shortened if-else loop.
      */
     public static int prod(int m, int n) {
         return ((m==n) ? (n) : (n*prod(m, n - 1)));
