@@ -11,18 +11,16 @@ import java.util.Scanner;
  */
 public class GuessGame {
     /** 
-     * This main method makes possible user input between 1 and 100,
-     * ganerates random number and invokes 'guess' method with
-     * 'answer' argument variable.
+     * This main method ganerates random number and invokes 
+     * 'guess' method with 'answer' argument variable.
      */
     public static void main(String args[]) {
-        Scanner console = new Scanner(System.in);
         Random random = new Random();
         int answer = random.nextInt(100) + 1;
         guess(answer);
     }
     /** 
-     * Prints few statements and encourage user to input number.
+     * Prints few statements and encourage user to input number between 1 and 100.
      * Makes if-else loop to check if this input is correct or how far off was user
      * and invokes method again. Else branch prints different output if input number
      * is too high or too low by using nested shortened if-else loop.
@@ -31,9 +29,11 @@ public class GuessGame {
         System.out.println("I'm thinking of a number between 1 and 100");
         System.out.println("(including both). Can you guess what it is?");
         System.out.print("Type a number: ");
+        Scanner console = new Scanner(System.in);
         int input = console.nextInt();
         if (input == answer) {
             System.out.println(input + " is correct!");
+            console.close();
         }
         else {
             System.out.println(input + " is too " + (input > answer ? "high" : "low"));
