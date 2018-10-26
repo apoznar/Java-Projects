@@ -1,26 +1,28 @@
 /**
  * The SquareRoot class implements an application that 
- * displays "Hello World!" to the standard output
- * and uses some escape sequences.
+ * makes a square root of a number without using Math library
+ * and by using do-while loop.
  *
  * @author  Adam Poznar
- * @version 1.1
- * @since   2018-09-13 
+ * @version 1.2
+ * @since   2018-09-17 
  */
 public class SquareRoot {
-     /** 
- * This main method invokes squareRoot method 
- * with given parameter.
- */
+    /** 
+     * This main method invokes squareRoot method with given parameter.
+     */
     public static void main(String[] args) {
         squareRoot(2);
     }
-     /** 
- * This method takes an argument from main method
- * and makes series of computations that are simply
- * square root and returns value.
- */
-    public static double squareRoot(double a){
+    /** 
+     * Takes an argument from main method and makes series of computations
+     * by using do-while loop. It computes 'oldValue' variable, then 'newValue'
+     * variable and 'interval' variable as a substraction of these two and prints 
+     * it in loop. In next loop 'oldValue' is updated by latest 'newValue; variable 
+     * and loop goes on until interval value is over 0.001, then it returns 
+     * 'newValue' as a result.
+     */
+    public static double squareRoot(double a) {
         double oldValue = a/2;
         double newValue = a/2;
         double interval = 0;
