@@ -1,41 +1,36 @@
 /**
- * The IndexOfMax class implements an application that 
+ * The IndexOfMax class implements an application that
+ * takes an array of integers and returns index of 
+ * largest element by using enchanced for loop.
  *
  * @author  Adam Poznar
- * @version 1.1
- * @since   2018-09-14 
+ * @version 1.2
+ * @since   2018-09-18 
  */
 public class IndexOfMax {
-     /** 
- * This main method
- */
+    /** 
+     * This main method executes indexOfMax method
+     * with given parameters and gives indexes to array elements.
+     */
     public static void main(String[] args) {
-    }
-     /** 
- * This method
- */
-    public static int indexOfMax(int[] numbers){
-        int index = 0;
-        for (int i=1;i<numbers.length;i++){
-            if (numbers[i] > numbers[index]){
-                index = i;
-            }
+        int [] array = new int[100];
+        for (int i = 0; i < 100; ++i) {
+            array[i] = i;
         }
-        return index;
+        indexOfMax(array);
     }
-     /** 
- * This method
- */
-    public static int indexOfMaxWrittenInEnhancedForLoop(int[] numbers){
+    /** 
+     * Prints highest index in an array.
+     */
+    public static void indexOfMax(int[] array) {
         int index = 0;
         int i = 0;
-        for (int number : numbers){
-            if (numbers[i] > numbers[index]){
+        for (int number : array) {
+            if (array[i] > array[index]) {
                 index = i;
             }
             i++;
         }
-        return index;
+        System.out.println(index);
     }
-    
 }
