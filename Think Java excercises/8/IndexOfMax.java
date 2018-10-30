@@ -9,8 +9,8 @@
  */
 public class IndexOfMax {
     /** 
-     * This main method executes indexOfMax method
-     * with given parameters and gives indexes to array elements.
+     * This main method gives indexes to 100 array elements
+     * and executes indexOfMax method with given parameters.
      */
     public static void main(String[] args) {
         int [] array = new int[100];
@@ -20,7 +20,7 @@ public class IndexOfMax {
         indexOfMax(array);
     }
     /** 
-     * Prints highest index in an array.
+     * Prints highest index in an array (99) by using enchanced for loop.
      */
     public static void indexOfMax(int[] array) {
         int index = 0;
