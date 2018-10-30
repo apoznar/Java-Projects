@@ -9,7 +9,7 @@
  */
 public class ArePrimeFactors {
     /** 
-     * This main method executes both methods.
+     * This main method executes arePrimeFactors method with given arguments.
      */
     public static void main(String[] args) {
         int n = 7;
@@ -17,7 +17,7 @@ public class ArePrimeFactors {
         System.out.println(arePrimeFactors(n, arr));
     }
     /** 
-     * This method checks if elements in an array are prime and their product is n.
+     * Checks if elements in an array are prime and their product is n.
      */
     public static boolean arePrimeFactors(int n, int[] arr) {
         int result = 1;
@@ -37,7 +37,7 @@ public class ArePrimeFactors {
         }
     }
     /** 
-     * This method checks if n is > 2, then checks if it is odd.
+     * Checks if n is > 2, then checks if it is odd.
      */
     public static boolean isPrime(int n) {
         if (n < 2) {
