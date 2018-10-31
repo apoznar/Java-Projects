@@ -1,23 +1,29 @@
+import java.math.BigInteger;
 /**
- * The Hello class implements an application that 
- * displays "Hello World!" to the standard output
- * and uses some escape sequences.
+ * The Big class implements an application that 
+ * raises large integers to a power.
  *
  * @author  Adam Poznar
- * @version 1.1
- * @since   2018-09-11 
+ * @version 1.2
+ * @since   2018-09-20 
  */
-public class BigPow{
-     /** 
- * This main method 
- */
+public class BigPow {
+    /** 
+     * This main method invokes pow method with given parameters.
+     */
+    public static void main(String args[]) {
+        System.out.println(pow(2, 5));
+    }
+    /** 
+     * Returns a powered value, transformed to a BigInteger type. 
+     */
     public static BigInteger pow(int x, int n) {
         if (n == 0) 
             return BigInteger.valueOf(1);
-        // find x to the n/2 recursively
+        // Find x to the n/2 recursively.
         BigInteger t = pow(x, n/2);
-        // if n is even, the result is t squared
-        // if n is odd, the result is t squared times x
+        // If n is even, the result is t squared.
+        // If n is odd, the result is t squared times x.
         if (n % 2 == 0) {
             return t.multiply(t);
         } 
