@@ -6,61 +6,65 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 /**
- * The Hello class implements an application that 
- * displays "Hello World!" to the standard output
- * and uses some escape sequences.
+ * The CardTable class implements an application that 
+ * 
  *
  * @author  Adam Poznar
- * @version 1.1
- * @since   2018-09-15 
+ * @version 1.2
+ * @since   2018-09-22
  */
 public class CardTable extends Canvas {
-
+    /**
+     * Declares multidimensional array with images of cards and sizes of cards.
+     */
     private Image[][] images;
     private int cardWidth, cardHeight;
-
+    /** 
+     * This main method makes the frame by using JFrame, adds Cardtable object
+     * and shows the frame.
+     */
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Card Table");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        String cardset = "cardset-oxymoron";
+        Canvas canvas = new CardTable(cardset);
+        frame.getContentPane().add(canvas);
+        frame.pack();
+        frame.setVisible(true);
+    }
     /**
-     * Creates a CardTable.
-     * cardset is the name of the folder that contains the card images.
+     * Creates a table of cards with defined background color and creates
+     * a 2D array of card images.
      */
     public CardTable(String cardset) {
         setBackground(new Color(0x088A4B));
-
-        // create a 2-D array of card images
         images = new Image[14][4];
         String suits = "cdhs";
-
         for (int suit = 0; suit <= 3; suit++) {
             char c = suits.charAt(suit);
-
             for (int rank = 1; rank <= 13; rank++) {
                 String s = String.format("%s/%02d%c.gif",
                                          cardset, rank, c);
                 images[rank][suit] = new ImageIcon(s).getImage();
             }
         }
-
-        // get the width and height of the cards and set the size of
-        // the frame accordingly
+        /**
+         * Gets the width and height of the cards and set the 
+         * size of the frame accordingly. Also sets temporalily size of a table.
+         */
         cardWidth = images[1][1].getWidth(null);
         cardHeight = images[1][1].getHeight(null);
-
-        // set the size temporarily to get the insets
         setTableSize(14, 4);
     }
-
     /**
-     * Sets the table size.
-     * x and y are in units of card width/height.
+     * Sets the table size through x and y variables.
      */
     public void setTableSize(double x, double y) {
         setSize((int) (x * cardWidth),
                 (int) (y * cardHeight));
     }
-
     /**
      * Draws a card at the given coordinates.
-     * x and y are in units of card width/height.
      */
     public void drawCard(Graphics g, int rank, int suit, double x, double y) {
         Image image = images[rank][suit];
@@ -69,7 +73,6 @@ public class CardTable extends Canvas {
                     (int) (y * cardHeight),
                     null);
     }
-
     /**
      * Special method invoked when the Frame needs to be drawn.
      */
@@ -82,20 +85,4 @@ public class CardTable extends Canvas {
             }
         }
     }
-
-    public static void main(String[] args) {
-        // make the frame
-        JFrame frame = new JFrame("Card Table");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        // add the CardTable
-        String cardset = "cardset-oxymoron";
-        Canvas canvas = new CardTable(cardset);
-        frame.getContentPane().add(canvas);
-
-        // show the frame
-        frame.pack();
-        frame.setVisible(true);
-    }
-
 }
