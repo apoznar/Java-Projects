@@ -1,6 +1,7 @@
 /**
  * The Card class implements an application that 
- *
+ * creates a deck of cards with proper ranks and suits,
+ * and provides mechanism to compare them.
  * 
  * @author  Adam Poznar
  * @version 1.2
@@ -8,7 +9,7 @@
  */
 public class Card {
     /** 
-     * This main method 
+     * This main method invokes makeDeck method.
      */
     public static void main(String args[]) {
         makeDeck();
