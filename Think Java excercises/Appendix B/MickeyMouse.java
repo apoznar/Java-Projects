@@ -2,7 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 /**
  * The MickeyMouse class implements an application that 
- * 
+ * makes a Mickey Mouse head shape.
  *
  * @author  Adam Poznar
  * @version 1.2
