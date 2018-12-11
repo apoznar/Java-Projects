@@ -1,0 +1,53 @@
+/**
+ * The Player class implements an application that 
+ * sets a Player in a game of Crazy Eights.
+ *
+ * @author  Adam Poznar
+ * @version 1.2
+ * @since   2018-09-24 
+ */
+public class Player {
+    private String name;
+    private CardCollection hand;
+    /**
+     * Constructs a player with an empty hand.
+     */
+    public Player(String name) {
+        this.name = name;
+        this.hand = new CardCollection(name);
+    }
+    /**
+     * Gets the player's name.
+     */
+    public String getName() {
+        return name;
+    }
+    /**
+     * Gets the player's hand.
+     */
+    public CardCollection getHand() {
+        return hand;
+    }
+    /**
+     * Calculates the player's score (penalty points).
+     */
+    public int score() {
+        int sum = 0;
+        for (int i = 0; i < getHand().size(); i++) {
+            sum += getHand().getCardAt(i).score();
+        }
+        return sum;
+    }
+    /**
+     * Displays the player's hand.
+     */
+    public void display() {
+        getHand().display();
+    }
+    /**
+     * Displays the player's name and score.
+     */
+    public void displayScore() {
+        System.out.println(name + " has " + score() + " points");
+    }
+}
